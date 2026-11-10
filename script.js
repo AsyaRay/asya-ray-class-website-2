@@ -33,3 +33,16 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+function showAlbum(img) {
+    const selectedAlbum = document.getElementById("selected-album");
+    const albumTitle = document.getElementById("album-title");
+    const albumYear = document.getElementById("album-year");
+    const albumGenre = document.getElementById("album-genre");
+    const albumTracks = document.getElementById("album-tracks");
+
+    selectedAlbum.src = img.src;
+    albumTitle.textContent = img.alt;
+    albumYear.textContent = img.dataset.year;
+    albumGenre.textContent = "Genres: " + img.dataset.genre;
+    albumTracks.textContent = "Recommended tracks: " + img.dataset.track;
+}

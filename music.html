@@ -15,7 +15,7 @@
             <ul class="nav-list">
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
-                <li><a href="music.html">MUSIC</a></li>
+                <li><a href="music.html" class="current-page">MUSIC</a></li>
             </ul>
         </nav>
     </header>
@@ -29,7 +29,9 @@
             <div class="music-text">
                 <h2 class="music-header">THE ART</h2>
                 <p>Singer, songwriter, producer, dancer, DJ, and actress. Tinashe is many things and when it comes to her art, the best words to use when describing her may just be an experimental visionary. Having so many years in the entertainment industry under her belt, the singer’s sound has greatly evolved over the years. Though most people recognize her from her 2014 hit, 2 On (feat. ScHoolboy Q) off her debut album, Aquarius, Tinashe has many hits within her discography that are worth listening to.</p>
-                <p>From Contemporary alternative R&B Neo-Soul mixtapes to Hyperpop Electronic Dance Pop, Tinashe is clearly no stranger to working a wide range of genres into her projects. In other words, she’s quite the versatile artist. However, that did not come easy. In February 2019, Tinashe separated from RCA Records due to creative differences, poor promotions, release delays, and mismanagement. But of course, she did not let those creative challenges falter her mind nor her career. In fact, it did not take long for her to release her first independent album, Songs for You, November 21, 2019 under her own label, Tinashe Music Inc. Making it her first project after her departure with RCA Records. The album covered many themes… (going into further detail about her work, sound, writing)</p>
+                <p>From Contemporary alternative R&B Neo-Soul mixtapes to Hyperpop Electronic Dance Pop, Tinashe is clearly no stranger to working a wide range of genres into her projects. In other words, she’s quite the versatile artist. However, that did not come easy. In February 2019, Tinashe separated from RCA Records due to creative differences, poor promotions, release delays, and mismanagement. But of course, she did not let those creative challenges falter her mind nor her career. In fact, it did not take long for her to release her first independent album, Songs for You, November 21, 2019 under her own label, Tinashe Music Inc. Making it her first project after her departure with RCA Records.</p>
+                <p>Since her departure from the label, Tinashe has continued to thrive within the music industry by continuously experimenting with different sounds, blending genres, and creating unique concepts that align with her musical identity. With newer hits like "Nasty", "No Broke Boys", and her most recent studio album Popstar, Tinashe is very much still thriving and worth the listen.
+</p>
             </div>
 
             <div class="music-images">
@@ -39,21 +41,31 @@
             </div>
 
         </div>
-
+            <p class="cta">Scroll to explore Tinashe's discography. Click on a cover to learn more!</p>
         <div class="album-carousel">
-           <img src="album1.jpg" alt="In Case We Die">
-           <img src="album2.png" alt="Reverie">
-           <img src="album3.jpg" alt="Black Water">
-           <img src="album4.jpg" alt="Aquarius">
-           <img src="album5.jpg" alt="Amethyst">
-           <img src="album6.jpg" alt="Nightride">
-           <img src="album7.png" alt="Joyride">
-           <img src="album8.jpg" alt="Songs for You">
-           <img src="album9.jpeg" alt="333 Deluxe">
-           <img src="album10.jpeg" alt="BB/Angel">
-           <img src="album11.png" alt="Quantum Baby">
-           <img src="album12.png" alt="Popstar">
+           <img src="album1.jpg" alt="In Case We Die" data-year="2012" data-genre="Alternative R&B, Electronic, Trap Soul" data-track="The Last Night On Earth, Let You Love Me, Crossing The Cosmo" onclick="showAlbum(this)">
+           <img src="album2.png" alt="Reverie" data-year="2012" data-genre="Alternative R&B, Electronic, Downtempo" data-track="Yours, Another Me, Ecstasy" onclick="showAlbum(this)">
+           <img src="album3.jpg" alt="Black Water" data-year="2013" data-genre="Alternative R&B, Contemporary R&B, Neo-Soul" data-track="Midnight Sun, Just a Taste, Stunt" onclick="showAlbum(this)">
+           <img src="album4.jpg" alt="Aquarius" data-year="2014" data-genre="Alternative R&B, Contemporary R&B, Electronic" data-track="Feels like Vegas, Pretend FT. A$AP Rocky, Far Side Of The Moon" onclick="showAlbum(this)">
+           <img src="album5.jpg" alt="Amethyst" data-year="2015" data-genre="Alternative pop, Alternative R&B" data-track="Worth It FT. IAMSU!, Something To Feel, Dreams Are Real" onclick="showAlbum(this)">
+           <img src="album6.jpg" alt="Nightride" data-year="2016" data-genre="Alternative R&B, Neo-Soul, Trap" data-track="Ghetto Boy, Party Favors, Company" onclick="showAlbum(this)">
+           <img src="album7.png" alt="Joyride" data-year="2018" data-genre="Alternative R&B, Pop, Hip-Hop" data-track="No Contest, No Drama FT. Offset, Ooh La La" onclick="showAlbum(this)">
+           <img src="album8.jpg" alt="Songs for You" data-year="2019" data-genre="Alternative R&B, Dance Pop, Trap Soul" data-track="Perfect Crime,  Life's Too Short, Touch & Go FT. 6lack" onclick="showAlbum(this)">
+           <img src="album9.jpeg" alt="333 Deluxe" data-year="2022" data-genre="Alternative R&B, Hip-Hop, Electronic" data-track="Undo FT. Wax Motif, Let Me Down Slowly, Small Reminders" onclick="showAlbum(this)">
+           <img src="album10.jpeg" alt="BB/Angel" data-year="2023" data-genre="Alternative R&B, Electronic, Trap Soul" data-track="Gravity, None Of My Business, Talk To Me Nice" onclick="showAlbum(this)">
+           <img src="album11.png" alt="Quantum Baby" data-year="2024" data-genre="Alternative R&B, Pop Rap, Trap Soul" data-track="Getting No Sleep, Cross That Line, No Simulation" onclick="showAlbum(this)">
+           <img src="album12.png" alt="Popstar" data-year="2026" data-genre="Alternative R&B, Electronic, Hyperpop" data-track="Pillow Fight, I'd Rather Be Alone, Flashbacks" onclick="showAlbum(this)">
         </div>
+        
+    <div class="album-details">
+        <img id="selected-album" src="album1.jpg" alt="In Case We Die">
+          <div class="album-description">
+            <h2 id="album-title">In Case We Die</h2>
+            <p id="album-year">2012</p>
+            <p id="album-genre">Genres: Alternative R&B, Electronic, Trap Soul</p>
+            <p id="album-tracks">Recommended tracks: The Last Night On Earth, Let You Love Me, Crossing The Cosmo</p>
+        </div>
+    </div>
 
     </section>
 
@@ -61,7 +73,7 @@
 
     <h3 class="FAQ">Frequently Asked Questions</h3>
 
-    <button class="accordion">When was Tinashe's first big hit?</button>
+    <button class="accordion">What was Tinashe's first big hit?</button>
         <div class="panel">
             <p>Tinashe's first hit was her lead single for her debut album, Aquarius song, 2 On featuring ScHoolboy Q. The song reached number 24 on the US Billboard Hot 100.</p>
         </div>
