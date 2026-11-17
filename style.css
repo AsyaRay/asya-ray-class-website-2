@@ -33,18 +33,9 @@ main {
     display: flex;
 }
 
-h1 { 
+h1, h2, h3 { 
     font-family: 'Jogrunge', sans-serif;
     color: #fafafa;
-}
-h2 { 
-    font-family: 'Jogrunge', sans-serif;
-    color: #fafafa
-    
-}
-h3 { 
-    font-family: 'Jogrunge', sans-serif;
-    color: #fafafa
 }
 
 .logo {
@@ -80,7 +71,6 @@ h3 {
     text-decoration: none;
     color: #fafafa;
     padding: 8px 12px;
-    transition: all 0.2s ease;
     position: relative;
 }
 
@@ -193,7 +183,6 @@ h3 {
     font-size: 14px;
     color: #fafafa;
     padding: 8px 12px;
-    transition: all 0.2s ease;
     position: relative;
 }
 
@@ -223,18 +212,21 @@ h3 {
 }
 
 .about-gallery {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
     flex: 1.1;
 }
 
 .column {
-    float: left;
-    width: 25%;
     padding: 10px;
     box-sizing: border-box;
 }
 
 .column img {
     width: 100%;
+    height: auto;
+    display: block;
     opacity: 0.8;
     cursor: pointer;
 }
@@ -245,23 +237,24 @@ h3 {
 
 .container {
     position: relative;
-    margin: 15px auto 0;
-    width: 100%;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+    width: 50%;
+    margin-top: 10px;
 }
 
 #expandedImg {
     display: block;
-    height: 450px;
-    max-width: 100%;
-    width: auto;
+    width: 100%;
+    height: 400px;
     object-fit: contain;
-    margin: auto;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 50%;
+    max-width: 400px;
+    margin: 0;
 }
 
 #imgtext {
@@ -288,6 +281,7 @@ h3 {
 .about-header {
     font-size: 40px;
     margin-top: 8px;
+    margin-bottom: 0;
 }
 
 .music-page {
@@ -295,11 +289,11 @@ h3 {
 }
 
 .music-content {
+    padding: 40px;
+    box-sizing: border-box;
     display: grid;
     grid-template-rows: auto auto;
     gap: 30px;
-    padding: 40px;
-    box-sizing: border-box;
 }
 
 .music-info {
@@ -311,6 +305,7 @@ h3 {
 
 .music-header {
     font-size: 40px;
+    margin-bottom: 0;
 }
 
 .music-images {
@@ -331,6 +326,7 @@ h3 {
     margin-top: 0;
     margin-bottom: 0;
 }
+
 .album-carousel {
     width: 100%;
     background-color: #fafafa;
@@ -338,6 +334,7 @@ h3 {
     white-space: nowrap;
     padding: 10px;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 .album-carousel img {
@@ -351,6 +348,37 @@ h3 {
     width: 300px;
     height: 300px;
     object-fit: contain;
+}
+
+.album-links {
+    margin: 0;
+    padding: 0;
+}
+
+.album-links a {
+    font-family: 'HelveticaNeue Light', sans-serif;
+    font-size: inherit;
+    text-decoration: none;
+    color: #fafafa;
+    padding: 0;
+    position: relative;
+}
+
+.album-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fafafa;
+    transition: width 0.3s ease;
+}
+
+.album-links a:hover::after {
+    width: 100%;
+    bottom: -5px;
 }
 
 main.music-page {
@@ -390,6 +418,9 @@ main.music-page {
 
 .FAQ {
     font-size: 25px;
+    border-top: 1px solid #fafafa;
+    padding-top: 20px;
+    margin-top: 0;
 }
 
 @media screen and (max-width: 700px) {
@@ -403,11 +434,22 @@ main.music-page {
     flex: none;
 }
 
+.about-gallery {
+    flex-direction: column;
+    align-items: center;
+}
+
 .about-header {
     font-size: 30px;
 }
 
 .container {
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+.row {
     width: 100%;
 }
 
@@ -419,5 +461,13 @@ main.music-page {
 
 .column {
     padding: 5px;
+}
+
+body.about-page main {
+    display: block;
+}
+
+.music-info {
+    grid-template-columns: 1fr;
 }
 }
